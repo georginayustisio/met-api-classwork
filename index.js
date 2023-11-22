@@ -22,7 +22,6 @@ function fetchArtworkDetails(objectID) {
 
 function displayArtwork(artwork) {
     if (artwork.primaryImage && artwork.title && artwork.artistDisplayName) {
-        document.getElementById('artwork-image').src = artwork.primaryImage;
         document.getElementById('artwork-title').textContent = `Title: ${artwork.title}`;
         document.getElementById('artist-name').textContent = `Artist: ${artwork.artistDisplayName}`;
     } else {
