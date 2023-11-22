@@ -3,7 +3,6 @@ function fetchRandomArtwork() {
         .then(response => response.json())
         .then(data => {
             if (data.total) {
-                // Generate a random index based on the number of objects
                 const randomIndex = Math.floor(Math.random() * data.total);
                 const objectID = data.objectIDs[randomIndex];
                 fetchArtworkDetails(objectID);
@@ -31,5 +30,4 @@ function displayArtwork(artwork) {
     }
 }
 
-// Call the fetchRandomArtwork function when the page loads
 window.onload = fetchRandomArtwork;
